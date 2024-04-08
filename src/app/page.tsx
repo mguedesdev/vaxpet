@@ -3,6 +3,7 @@
 import { Header } from '@/components/Header/Index';
 import { Hero } from '@/components/PageHome/Hero';
 import HowItWork from '@/components/PageHome/HowItWork/HowItWork';
+import AboutUs from '@/components/PageHome/AboutUs/AboutUs';
 import {
   HeroBackgroundImage,
   MainContainer,
@@ -58,6 +59,7 @@ const Home = () => {
         <Hero.Content />
       </Hero.Root>
       <HowItWork />
+      <AboutUs />
     </MainContainer>
   );
 };
