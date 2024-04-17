@@ -21,7 +21,9 @@ const AboutUs = () => {
 
 Além disso, oferecemos uma gama de recursos informativos e educacionais. Através do VaxPet, você tem acesso a artigos, dicas de saúde e recomendações personalizadas fornecidas por especialistas veterinários. Quer se trate de uma dúvida sobre nutrição, comportamento ou bem-estar, nossa plataforma está pronta para ajudar a enriquecer a vida do seu pet, tornando o cuidado com a saúde animal fácil e acessível.`}
         </p>
+        <div className="separator" />
       </Content>
+
       <ImageContainer>
         <Image src="./images/ImageAboutUs.png" alt="About Us" />
       </ImageContainer>

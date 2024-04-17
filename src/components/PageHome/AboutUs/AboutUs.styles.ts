@@ -4,20 +4,21 @@ export const AboutUsContainer = styled.section`
   padding: 2rem 6rem;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  gap: 2rem;
 `;
 
 export const TitleContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 2rem;
-  width: 70%;
+  width: 100%;
 
   h1 {
     font-size: 3rem;
     font-weight: 800;
-    text-align: left;
     line-height: 2.5rem;
   }
 
@@ -30,25 +31,39 @@ export const TitleContainer = styled.div`
 
 export const Content = styled.div`
   display: flex;
+  position: relative;
   justify-content: space-between;
-  align-items: flex-end;
   flex-direction: column;
-  width: 50%;
+  width: 35%;
+  padding: 2rem 0;
+  height: 100%;
 
   p {
     font-size: 1.25rem;
     line-height: 1.75rem;
     text-align: justify;
-    width: 70%;
+    width: 100%;
     white-space: pre-wrap;
     color: ${({ theme }) => theme.colors.primaryText};
+    padding: 2rem 0;
+  }
+
+  .separator {
+    position: absolute;
+    border-bottom: 1px solid ${({ theme }) => theme.colors.primaryText};
+    bottom: 0;
+    width: 100%;
+    background-color: blue;
   }
 `;
 
 export const ImageContainer = styled.div`
   display: flex;
-  justify-content: center;
-  width: 50%;
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 `;
 
 export const Image = styled.img`

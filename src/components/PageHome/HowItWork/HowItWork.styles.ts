@@ -8,6 +8,7 @@ export const StyledSection = styled.section`
   justify-content: center;
   padding: 2rem 6rem;
   background-color: ${({ theme }) => theme.colors.primary};
+  z-index: 2;
 
   h2 {
     font-size: 3rem;

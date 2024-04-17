@@ -4,6 +4,7 @@ import { Header } from '@/components/Header/Index';
 import { Hero } from '@/components/PageHome/Hero';
 import HowItWork from '@/components/PageHome/HowItWork/HowItWork';
 import AboutUs from '@/components/PageHome/AboutUs/AboutUs';
+import NewsletterSub from '@/components/PageHome/NewsletterSub/NewsletterSub';
 import {
   HeroBackgroundImage,
   MainContainer,
@@ -13,13 +14,13 @@ import {
 const Home = () => {
   return (
     <MainContainer>
-      <StyledHeroBackground>
-        <HeroBackgroundImage
-          src="./images/hero-background.png"
-          alt="Hero Background"
-        />
-      </StyledHeroBackground>
       <Header.Root>
+        <StyledHeroBackground>
+          <HeroBackgroundImage
+            src="./images/hero-background.png"
+            alt="Hero Background"
+          />
+        </StyledHeroBackground>
         <Header.Logo />
         <Header.Actions>
           <Header.Action
@@ -60,6 +61,7 @@ const Home = () => {
       </Hero.Root>
       <HowItWork />
       <AboutUs />
+      <NewsletterSub />
     </MainContainer>
   );
 };
