@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const AboutUsContainer = styled.section`
-  padding: 2rem 6rem;
+  padding: 4rem 8rem;
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -34,8 +34,8 @@ export const Content = styled.div`
   position: relative;
   justify-content: space-between;
   flex-direction: column;
-  width: 35%;
-  padding: 2rem 0;
+  width: 50%;
+  padding: 2rem 0rem;
   height: 100%;
 
   p {
@@ -45,7 +45,8 @@ export const Content = styled.div`
     width: 100%;
     white-space: pre-wrap;
     color: ${({ theme }) => theme.colors.primaryText};
-    padding: 2rem 0;
+    padding-top: 2.5rem;
+    padding-bottom: 4.5rem;
   }
 
   .separator {
@@ -59,7 +60,6 @@ export const Content = styled.div`
 
 export const ImageContainer = styled.div`
   display: flex;
-  width: 45%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -68,6 +68,6 @@ export const ImageContainer = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  max-width: 650px;
+  max-width: 700px;
   height: auto;
 `;

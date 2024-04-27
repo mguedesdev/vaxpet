@@ -7,7 +7,7 @@ export const HeroContainer = styled.section`
   height: 95vh;
   position: relative;
   z-index: 1;
-  padding: 0 6rem;
+  padding: 0 8rem;
 `;
 
 export const HeroImageContainer = styled.div`

@@ -5,8 +5,9 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.4rem 6rem;
+  padding: 1.4rem 8rem;
   width: 100%;
+  z-index: 1;
 `;
 
 export const LogoContainer = styled.div`

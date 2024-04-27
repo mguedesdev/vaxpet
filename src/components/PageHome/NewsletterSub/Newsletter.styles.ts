@@ -31,8 +31,8 @@ export const TitleContainer = styled.div`
 `;
 
 export const ContentText = styled.p`
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: clamp(0.3rem, 1.3rem, 2rem);
+  line-height: 2rem;
   text-align: justify;
   width: 100%;
   white-space: pre-line;
@@ -44,6 +44,11 @@ export const InputContainer = styled.div`
   display: flex;
   gap: 1rem;
   width: 40%;
+  position: relative;
+
+  @media (max-width: 1300px) {
+    width: 60%;
+  }
 `;
 
 export const Input = styled.input`
@@ -75,6 +80,15 @@ export const ImageContainer = styled.div`
   top: -50;
   right: 0;
   z-index: 0;
+
+  @media (max-width: 1300px) {
+    top: -100%;
+    width: 25%;
+  }
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const BackgroundImage = styled.img`
