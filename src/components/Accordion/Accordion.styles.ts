@@ -24,6 +24,7 @@ export const AccordionTitle = styled.button<AccordionTitleProps>`
   outline: none;
   cursor: pointer;
   font-size: 1.2rem;
+  font-weight: 600;
   display: flex;
   justify-content: space-between;
   align-items: center;

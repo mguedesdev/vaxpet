@@ -20,3 +20,11 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.white};
   margin-bottom: 2rem;
 `;
+
+export const AccordionText = styled.p`
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+  text-align: justify;
+  color: ${({ theme }) => theme.colors.white};
+`;

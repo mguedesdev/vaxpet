@@ -6,6 +6,7 @@ import HowItWork from '@/components/PageHome/HowItWork/HowItWork';
 import AboutUs from '@/components/PageHome/AboutUs/AboutUs';
 import NewsletterSub from '@/components/PageHome/NewsletterSub/NewsletterSub';
 import Faq from '@/components/PageHome/Faq/Faq';
+import Footer from '@/components/PageHome/Footer/Footer';
 import {
   HeroBackgroundImage,
   MainContainer,
@@ -64,6 +65,7 @@ const Home = () => {
       <AboutUs />
       <NewsletterSub />
       <Faq />
+      <Footer />
     </MainContainer>
   );
 };
