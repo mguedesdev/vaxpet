@@ -9,7 +9,7 @@ export const CardContainer = styled.div`
   justify-content: center;
   width: 100%;
   padding: 2rem;
-  background-color: ${({ theme }) => rgba(theme.colors.primary80, 0.34)};
+  background-color: ${({ theme }) => rgba(theme.colors.primary60, 0.34)};
   border-radius: 2rem;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
   height: 330px;

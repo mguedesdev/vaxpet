@@ -6,6 +6,8 @@ export const MainContainer = styled.main`
   align-items: center;
   justify-content: center;
   background-color: ${({ theme }) => theme.colors.background};
+  z-index: -1;
+  overflow: hidden;
 `;
 
 export const StyledHeroBackground = styled.div`

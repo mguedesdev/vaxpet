@@ -5,6 +5,7 @@ import { Hero } from '@/components/PageHome/Hero';
 import HowItWork from '@/components/PageHome/HowItWork/HowItWork';
 import AboutUs from '@/components/PageHome/AboutUs/AboutUs';
 import NewsletterSub from '@/components/PageHome/NewsletterSub/NewsletterSub';
+import Faq from '@/components/PageHome/Faq/Faq';
 import {
   HeroBackgroundImage,
   MainContainer,
@@ -62,6 +63,7 @@ const Home = () => {
       <HowItWork />
       <AboutUs />
       <NewsletterSub />
+      <Faq />
     </MainContainer>
   );
 };

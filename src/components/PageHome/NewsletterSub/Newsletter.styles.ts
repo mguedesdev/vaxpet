@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const NewsletterContainer = styled.section`
-  padding: 6rem 15.5rem;
+  padding: 6rem 10rem;
   position: relative;
   width: 100%;
   display: flex;
@@ -9,6 +9,7 @@ export const NewsletterContainer = styled.section`
   align-items: flex-start;
   justify-content: center;
   height: 100%;
+  z-index: 1;
 `;
 
 export const TitleContainer = styled.div`
@@ -78,12 +79,18 @@ export const Button = styled.button`
 export const ImageContainer = styled.div`
   position: absolute;
   top: -50;
-  right: 0;
-  z-index: 0;
+  right: 0px;
+  z-index: -1;
+
+  @media (max-width: 1600px) {
+    top: -100%;
+    right: -100px;
+  }
 
   @media (max-width: 1300px) {
     top: -100%;
     width: 25%;
+    right: -100px;
   }
 
   @media (max-width: 600px) {
