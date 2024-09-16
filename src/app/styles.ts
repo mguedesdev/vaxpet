@@ -10,6 +10,18 @@ export const MainContainer = styled.main`
   overflow: hidden;
 `;
 
+export const StyledSection = styled.section`
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  &#about-us,
+  &#how-it-work,
+  &#faq {
+    scroll-margin-top: 100px;
+  }
+`;
+
 export const StyledHeroBackground = styled.div`
   position: absolute;
   top: 0;

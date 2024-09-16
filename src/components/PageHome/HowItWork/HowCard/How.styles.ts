@@ -1,19 +1,54 @@
 import styled from 'styled-components';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { rgba } from 'polished';
 
 export const CardContainer = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
   padding: 2rem;
-  background-color: ${({ theme }) => rgba(theme.colors.primary60, 0.34)};
   border-radius: 2rem;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  background: #282828;
   height: 330px;
   width: 330px;
+  overflow: hidden;
+
+  box-shadow:
+    9px 9px 18px #171717,
+    -9px -9px 18px #393939;
+
+  transition: box-shadow 0.3s;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    background: transparent;
+    box-shadow:
+      inset 9px 9px 18px #171717,
+      inset -9px -9px 18px #393939;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
 `;
 
 export const CardIconContainer = styled.div`

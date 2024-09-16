@@ -90,4 +90,20 @@ export const GlobalStyle = createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  input {
+      /* Estilo para campos preenchidos automaticamente */
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 30px #f3f3f3 inset;
+    -webkit-text-fill-color: ${({ theme }) => theme.colors.black};
+    border: 2px solid ${({ theme }) => theme.colors.grayLight};
+  }
+
+  /* Ajuste da cor para Firefox (não possui autofill diretamente mas é bom prevenir) */
+  &:-moz-autofill {
+    box-shadow: 0 0 0 30px #f3f3f3 inset;
+    -moz-text-fill-color: ${({ theme }) => theme.colors.black};
+    border: 2px solid ${({ theme }) => theme.colors.grayLight};
+  }
+  }
 `;

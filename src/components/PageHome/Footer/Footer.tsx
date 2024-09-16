@@ -16,10 +16,16 @@ const Footer = () => {
           © 2023 Matheus Guedes Ribeiro. Todos os direitos reservados.
         </FooterText>
         <ContainerButtons>
-          <SocialButton>
+          <SocialButton
+            onClick={() => window.open('mailto:mathheus.gr@gmail.com')}
+          >
             <EmailIcon />
           </SocialButton>
-          <SocialButton>
+          <SocialButton
+            onClick={() =>
+              window.open('https://www.linkedin.com/in/mathheusg/')
+            }
+          >
             <LinkedinIcon />
           </SocialButton>
         </ContainerButtons>

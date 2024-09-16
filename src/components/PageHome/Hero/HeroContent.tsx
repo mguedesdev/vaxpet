@@ -5,16 +5,23 @@ import {
   HeroTitle,
 } from './Hero.styles';
 
-const HeroContent = () => {
+interface HeroContentProps {
+  openModal: () => void;
+}
+
+const HeroContent = ({ openModal }: HeroContentProps) => {
   return (
     <HeroContentContainer>
       <HeroTitle>Cuidando dos seus pets na palma da mão</HeroTitle>
       <HeroDescription>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        lacinia neque ac lectus lobortis pharetra. Cras bibendum ultrices quam,
-        mollis lacinia mi ultricies quis.
+        Acompanhe a saúde e o bem-estar dos seus pets de forma fácil e
+        eficiente. Nossa plataforma permite que você gerencie consultas
+        veterinárias, agende vacinas, e acompanhe o histórico de cuidados com
+        praticidade, tudo em um só lugar.
       </HeroDescription>
-      <Button className="hero">Comece agora!</Button>
+      <Button className="hero" onClick={() => openModal()}>
+        Comece agora!
+      </Button>
     </HeroContentContainer>
   );
 };
