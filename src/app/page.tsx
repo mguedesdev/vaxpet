@@ -11,7 +11,6 @@ import { useModal } from '@/hooks/useModal';
 import Modal from '@/components/Modal/Modal';
 import ModalLogin from '@/components/ModalLogin/ModalLogin';
 import { useState } from 'react';
-import { boolean } from 'yup';
 import {
   HeroBackgroundImage,
   MainContainer,

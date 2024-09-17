@@ -37,6 +37,9 @@ export const Button = styled.button`
 
     &:hover {
       color: ${({ theme }) => theme.colors.secondary};
+      text-decoration: underline;
+      text-decoration-thickness: 0.1rem;
+      text-underline-offset: 0.6rem;
     }
   }
 

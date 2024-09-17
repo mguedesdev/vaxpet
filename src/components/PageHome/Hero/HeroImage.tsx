@@ -1,4 +1,9 @@
-import { HeroImageContainer, ImageStyled } from './Hero.styles';
+import {
+  Circle,
+  CirclesContainer,
+  HeroImageContainer,
+  ImageStyled,
+} from './Hero.styles';
 
 interface HeroImageProps {
   image: string;
@@ -7,7 +12,11 @@ interface HeroImageProps {
 const HeroImage = ({ image }: HeroImageProps) => {
   return (
     <HeroImageContainer className="hero-image">
-      <ImageStyled src={image} alt="hero" />
+      <CirclesContainer>
+        <Circle />
+        <Circle className="circle2" />
+        <ImageStyled src={image} alt="hero" />
+      </CirclesContainer>
     </HeroImageContainer>
   );
 };
