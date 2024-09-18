@@ -21,22 +21,65 @@ import {
 const Home = () => {
   const { isOpen, openModal, closeModal } = useModal();
   const [isRegister, setIsRegister] = useState(false);
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   const handleOpenModal = (register: boolean) => {
     setIsRegister(register);
     openModal();
+    setOpenMobileMenu(false);
   };
+
+  const handleClickAction = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setOpenMobileMenu(false);
+  };
+
+  if (openMobileMenu) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
 
   return (
     <MainContainer>
       <Header.Root>
-        <StyledHeroBackground>
-          <HeroBackgroundImage
-            src="./images/hero-background.png"
-            alt="Hero Background"
-          />
-        </StyledHeroBackground>
         <Header.Logo />
+        <Header.ButtonMobile
+          openMenu={() => setOpenMobileMenu(!openMobileMenu)}
+        />
+
+        <Header.ActionsMobile openMenu={openMobileMenu}>
+          <Header.Action
+            buttonType="text"
+            onClick={() => handleClickAction('how-it-work')}
+          >
+            Como funciona
+          </Header.Action>
+          <Header.Action
+            buttonType="text"
+            onClick={() => handleClickAction('about-us')}
+          >
+            Sobre
+          </Header.Action>
+          <Header.Action
+            buttonType="text"
+            onClick={() => handleClickAction('faq')}
+          >
+            FAQ
+          </Header.Action>
+          <Header.Action
+            buttonType="primary"
+            onClick={() => handleOpenModal(false)}
+          >
+            Entrar
+          </Header.Action>
+          <Header.Action
+            buttonType="secondary"
+            onClick={() => handleOpenModal(true)}
+          >
+            Cadastre-se
+          </Header.Action>
+        </Header.ActionsMobile>
         <Header.Actions>
           <Header.Action
             buttonType="text"
@@ -83,6 +126,12 @@ const Home = () => {
         </Header.Actions>
       </Header.Root>
       <Hero.Root>
+        <StyledHeroBackground>
+          <HeroBackgroundImage
+            src="./images/Rectangle 248.png"
+            alt="Hero Background"
+          />
+        </StyledHeroBackground>
         <Hero.Image image="./images/ImageHome-1.png" />
         <Hero.Content openModal={() => handleOpenModal(false)} />
       </Hero.Root>

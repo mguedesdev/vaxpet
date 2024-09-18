@@ -49,6 +49,11 @@ export const CardContainer = styled.div`
   &:hover::before {
     opacity: 1;
   }
+
+  @media (max-width: 768px) {
+    height: 270px;
+    width: 270px;
+  }
 `;
 
 export const CardIconContainer = styled.div`
@@ -57,6 +62,16 @@ export const CardIconContainer = styled.div`
   justify-content: center;
   width: 6rem;
   height: 6rem;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    width: 4rem;
+    height: 4rem;
+  }
 `;
 
 export const CardContent = styled.div`

@@ -8,6 +8,14 @@ export const HeroContainer = styled.section`
   position: relative;
   z-index: 1;
   padding: 0 8rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+    height: auto;
+    margin: 7rem 0 4rem 0;
+    z-index: 0;
+  }
 `;
 
 export const CirclesContainer = styled.div`
@@ -62,6 +70,9 @@ export const HeroImageContainer = styled.div`
   width: 100%;
   height: 95%;
   position: relative;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ImageStyled = styled.img`
@@ -91,17 +102,26 @@ export const HeroContentContainer = styled.div`
 
   button {
     margin-top: 2rem;
+    animation: ${fadeIn} 6s;
+  }
+
+  @media (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+    justify-content: start;
+    margin-top: 2rem;
   }
 `;
 
 export const HeroTitle = styled.h1`
-  font-size: 4.5rem;
+  font-size: clamp(32px, 5vw, 74px);
   font-weight: 800;
   color: ${({ theme }) => theme.colors.primary};
   animation: ${fadeIn} 2s;
 `;
 
 export const HeroDescription = styled.p`
+  font-size: clamp(1rem, 5vw, 1.3rem);
   font-size: 1.3rem;
   color: ${({ theme }) => theme.colors.primaryText};
   margin-top: 1rem;
@@ -109,4 +129,8 @@ export const HeroDescription = styled.p`
   text-align: justify;
   width: 100%;
   animation: ${fadeIn} 4s;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
