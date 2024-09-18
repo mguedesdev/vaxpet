@@ -10,6 +10,10 @@ export const NewsletterContainer = styled.section`
   justify-content: center;
   height: 100%;
   z-index: 1;
+
+  @media (max-width: 1300px) {
+    padding: 3rem 2rem;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -19,7 +23,7 @@ export const TitleContainer = styled.div`
   width: 100%;
 
   h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 800;
     line-height: 2.5rem;
   }
@@ -28,17 +32,26 @@ export const TitleContainer = styled.div`
     width: 2.5rem;
     height: 2.5rem;
     margin-left: 1rem;
+
+    @media (max-width: 768px) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 `;
 
 export const ContentText = styled.p`
-  font-size: clamp(0.3rem, 1.3rem, 2rem);
+  font-size: clamp(1.1rem, 2vw, 2rem);
   line-height: 2rem;
   text-align: justify;
   width: 100%;
   white-space: pre-line;
   color: ${({ theme }) => theme.colors.black};
   padding: 2rem 0;
+
+  @media (max-width: 1300px) {
+    text-align: center;
+  }
 `;
 
 export const InputContainer = styled.div`
@@ -49,6 +62,10 @@ export const InputContainer = styled.div`
 
   @media (max-width: 1300px) {
     width: 60%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -64,6 +81,10 @@ export const Input = styled.input`
   &::placeholder {
     color: ${({ theme }) => theme.colors.grayLight};
   }
+
+  @media (max-width: 1300px) {
+    width: 100%;
+  }
 `;
 
 export const Button = styled.button`
@@ -74,6 +95,17 @@ export const Button = styled.button`
   border-radius: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  @media (max-width: 768px) {
+    padding: 0rem 0.8rem;
+    span {
+      display: none;
+    }
+  }
 `;
 
 export const ImageContainer = styled.div`

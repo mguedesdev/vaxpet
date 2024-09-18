@@ -6,6 +6,11 @@ export const FooterContainer = styled.footer`
   padding: 1rem 0;
   text-align: center;
   width: 100%;
+
+  @media (max-width: 768px) {
+    padding: 1rem 0;
+    text-align: start;
+  }
 `;
 
 export const FooterContent = styled.div`
@@ -14,10 +19,18 @@ export const FooterContent = styled.div`
   align-items: center;
   padding: 0 10rem;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0 2rem;
+  }
 `;
 
 export const FooterText = styled.p`
   font-size: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const ContainerButtons = styled.div`
@@ -26,6 +39,10 @@ export const ContainerButtons = styled.div`
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    margin-top: 0.5rem;
+  }
 `;
 
 export const SocialButton = styled.button`
@@ -41,5 +58,12 @@ export const SocialButton = styled.button`
   svg {
     width: 2rem;
     height: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
   }
 `;

@@ -1,4 +1,5 @@
 import PawBulletIcon from '@/components/Icons/PawBulletIcon';
+import { Send } from 'lucide-react';
 import {
   BackgroundImage,
   Button,
@@ -23,7 +24,10 @@ const NewsletterSub = () => {
       </ContentText>
       <InputContainer>
         <Input type="email" placeholder="Digite seu melhor e-mail" />
-        <Button>Enviar</Button>
+        <Button>
+          <span>Enviar</span>
+          <Send size={20} />
+        </Button>
       </InputContainer>
       <ImageContainer>
         <BackgroundImage

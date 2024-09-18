@@ -12,6 +12,10 @@ export const AccordionContainer = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
   background-color: #444;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const AccordionTitle = styled.button<AccordionTitleProps>`
@@ -23,7 +27,7 @@ export const AccordionTitle = styled.button<AccordionTitleProps>`
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 600;
   display: flex;
   justify-content: space-between;
@@ -33,6 +37,9 @@ export const AccordionTitle = styled.button<AccordionTitleProps>`
   &:after {
     content: '${props => (props.isOpen ? '-' : '+')}';
     font-size: 1.8rem;
+    min-width: 1rem;
+    text-align: center;
+
     filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 1));
   }
 `;
