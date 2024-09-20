@@ -145,8 +145,9 @@ const Home = () => {
       <StyledSection id="faq">
         <Faq />
       </StyledSection>
-      <Footer />
-
+      <StyledSection id="footer">
+        <Footer />
+      </StyledSection>
       <Modal isOpen={isOpen} onClose={closeModal}>
         <ModalLogin onClose={closeModal} register={isRegister} />
       </Modal>

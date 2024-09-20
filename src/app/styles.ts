@@ -14,6 +14,17 @@ export const StyledSection = styled.section`
   display: flex;
   width: 100%;
   height: 100%;
+  justify-content: center;
+  z-index: 1;
+
+  &#how-it-work,
+  &#faq {
+    background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  &#footer {
+    background-color: ${({ theme }) => theme.colors.primary80};
+  }
 
   &#about-us,
   &#how-it-work,
@@ -28,10 +39,10 @@ export const StyledSection = styled.section`
 
 const rotate1 = keyframes`
   0% {
-    transform: translate(600px, 0) rotate(0deg);
+    transform: translate(700px, 0) rotate(0deg);
   }
   100% {
-    transform: translate(600px, 0)  rotate(-15deg);
+    transform: translate(700px, 0)  rotate(-15deg);
   }
 `;
 
@@ -41,6 +52,10 @@ export const StyledHeroBackground = styled.div`
   right: 0;
   z-index: -10;
   animation: ${rotate1} 6s infinite alternate;
+
+  @media (max-width: 1439px) {
+    padding: 0rem 3.5rem;
+  }
 
   @media (max-width: 768px) {
     display: none;

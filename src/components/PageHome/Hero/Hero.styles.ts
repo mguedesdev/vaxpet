@@ -7,7 +7,11 @@ export const HeroContainer = styled.section`
   height: 95vh;
   position: relative;
   z-index: 1;
-  padding: 0 8rem;
+  max-width: 1440px;
+
+  @media (max-width: 1600px) {
+    padding: 0rem 3.5rem;
+  }
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -68,8 +72,9 @@ export const HeroImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 95%;
+  height: 90%;
   position: relative;
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -114,15 +119,14 @@ export const HeroContentContainer = styled.div`
 `;
 
 export const HeroTitle = styled.h1`
-  font-size: clamp(32px, 5vw, 74px);
+  font-size: clamp(28px, 5vw, 50px);
   font-weight: 800;
   color: ${({ theme }) => theme.colors.primary};
   animation: ${fadeIn} 2s;
 `;
 
 export const HeroDescription = styled.p`
-  font-size: clamp(1rem, 5vw, 1.3rem);
-  font-size: 1.3rem;
+  font-size: clamp(1rem, 5vw, 1.2rem);
   color: ${({ theme }) => theme.colors.primaryText};
   margin-top: 1rem;
   white-space: pre-line;

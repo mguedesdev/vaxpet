@@ -6,9 +6,10 @@ export const StyledSection = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 8rem;
+  padding: 4rem 0rem;
   background-color: ${({ theme }) => theme.colors.primary};
   z-index: 1;
+  max-width: 1440px;
 
   h2 {
     font-size: clamp(2rem, 5vw, 3rem);

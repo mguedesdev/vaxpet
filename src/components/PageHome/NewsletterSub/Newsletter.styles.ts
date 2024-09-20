@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const NewsletterContainer = styled.section`
-  padding: 6rem 10rem;
+  padding: 6rem 0rem;
   position: relative;
   width: 100%;
   display: flex;
@@ -10,6 +10,11 @@ export const NewsletterContainer = styled.section`
   justify-content: center;
   height: 100%;
   z-index: 1;
+  max-width: 1440px;
+
+  @media (max-width: 1600px) {
+    padding: 6rem 3.5rem;
+  }
 
   @media (max-width: 1300px) {
     padding: 3rem 2rem;
@@ -111,7 +116,7 @@ export const Button = styled.button`
 export const ImageContainer = styled.div`
   position: absolute;
   top: -50;
-  right: 0px;
+  right: -250px;
   z-index: -1;
 
   @media (max-width: 1600px) {

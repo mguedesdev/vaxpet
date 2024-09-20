@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const AboutUsContainer = styled.section`
-  padding: 4rem 10rem;
+  padding: 4rem 0rem;
   padding-bottom: 0;
   width: 100%;
   display: flex;
@@ -9,6 +9,11 @@ export const AboutUsContainer = styled.section`
   justify-content: space-between;
   height: 100%;
   gap: 2rem;
+  max-width: 1440px;
+
+  @media (max-width: 1600px) {
+    padding: 4rem 3.5rem;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -23,7 +28,7 @@ export const TitleContainer = styled.div`
   width: 100%;
 
   h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 5vw, 2rem);
     font-weight: 800;
     line-height: 2.5rem;
   }
@@ -72,7 +77,7 @@ export const TextContainer = styled.div`
   padding-bottom: 4.5rem;
 
   p {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1rem, 2vw, 1.125rem);
     line-height: 1.75rem;
     text-align: justify;
     width: 100%;
@@ -106,6 +111,10 @@ export const Image = styled.img`
   width: 100%;
   max-width: 700px;
   height: auto;
+
+  @media (max-width: 1600px) {
+    padding: 2rem;
+  }
 
   @media (max-width: 768px) {
     max-width: 100%;

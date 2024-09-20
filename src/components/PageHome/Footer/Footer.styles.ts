@@ -1,11 +1,15 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-  background-color: ${({ theme }) => theme.colors.primary80};
   color: #fff;
   padding: 1rem 0;
   text-align: center;
   width: 100%;
+  max-width: 1440px;
+
+  @media (max-width: 1600px) {
+    padding: 1rem 3.5rem;
+  }
 
   @media (max-width: 768px) {
     padding: 1rem 0;
@@ -17,7 +21,7 @@ export const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10rem;
+  padding: 0 0rem;
   margin: 0 auto;
 
   @media (max-width: 768px) {

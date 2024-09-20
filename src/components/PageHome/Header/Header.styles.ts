@@ -5,9 +5,14 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.4rem 8rem;
+  padding: 1.4rem 0rem;
   width: 100%;
   z-index: 1;
+  max-width: 1440px;
+
+  @media (max-width: 1600px) {
+    padding: 1.4rem 3.5rem;
+  }
 
   @media (max-width: 768px) {
     padding: 1.4rem 2rem;
