@@ -19,6 +19,10 @@ export const StyledSection = styled.section`
   &#how-it-work,
   &#faq {
     scroll-margin-top: 100px;
+
+    @media (max-width: 768px) {
+      scroll-margin-top: 50px;
+    }
   }
 `;
 

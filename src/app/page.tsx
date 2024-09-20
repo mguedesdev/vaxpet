@@ -1,6 +1,5 @@
 'use client';
 
-import { Header } from '@/components/Header/Index';
 import { Hero } from '@/components/PageHome/Hero';
 import HowItWork from '@/components/PageHome/HowItWork/HowItWork';
 import AboutUs from '@/components/PageHome/AboutUs/AboutUs';
@@ -11,6 +10,7 @@ import { useModal } from '@/hooks/useModal';
 import Modal from '@/components/Modal/Modal';
 import ModalLogin from '@/components/ModalLogin/ModalLogin';
 import { useState } from 'react';
+import { Header } from '@/components/PageHome/Header/Index';
 import {
   HeroBackgroundImage,
   MainContainer,

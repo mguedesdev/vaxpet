@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Providers from '@/components/Providers/Providers';
 import { Inter } from 'next/font/google';
+import ClientLayout from '@/components/ClientLayout/ClientLayout';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -9,15 +9,11 @@ export const metadata: Metadata = {
   description: '',
 };
 
-const RootLayout = ({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) => {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="pt">
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );

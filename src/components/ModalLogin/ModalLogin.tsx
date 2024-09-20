@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence, color } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 import BackButtonIcon from '../Icons/BackButtonIcon';
 import {
   ActionsContainer,
@@ -26,6 +27,7 @@ interface ModalLoginProps {
 
 const ModalLogin = ({ onClose, register = false }: ModalLoginProps) => {
   const [isRegister, setIsRegister] = useState(register);
+  const router = useRouter();
 
   const handleToggleForm = () => {
     setIsRegister(!isRegister);
@@ -190,7 +192,12 @@ const ModalLogin = ({ onClose, register = false }: ModalLoginProps) => {
                   </>
                 )}
               </FormInputsContainer>
-              <CustomButton type="submit">
+              <CustomButton
+                type="button"
+                onClick={() => {
+                  router.push('/dashboard');
+                }}
+              >
                 {isRegister ? 'Registrar' : 'Entrar'}
               </CustomButton>
               <ActionsContainer>

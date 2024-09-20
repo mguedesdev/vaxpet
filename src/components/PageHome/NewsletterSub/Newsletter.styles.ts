@@ -41,7 +41,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const ContentText = styled.p`
-  font-size: clamp(1.1rem, 2vw, 2rem);
+  font-size: clamp(1.1rem, 1vw, 1.6rem);
   line-height: 2rem;
   text-align: justify;
   width: 100%;
@@ -50,7 +50,7 @@ export const ContentText = styled.p`
   padding: 2rem 0;
 
   @media (max-width: 1300px) {
-    text-align: center;
+    /* text-align: center; */
   }
 `;
 

@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
-import { Button } from '../Button/Button.styles';
+import { Button } from '@/components/Button/Button.styles';
 
 interface HeaderActionProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
