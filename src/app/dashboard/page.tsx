@@ -2,6 +2,7 @@
 
 import NextEvents from '@/components/PageDashboard/NextEvents/NextEvents';
 import LastEvents from '@/components/PageDashboard/LastEvents/LastEvents';
+import MyPets from '@/components/PageDashboard/MyPets/MyPets';
 import { Container, GridLayout, MainContainer } from './styles';
 
 const DashboardPage = () => {
@@ -15,7 +16,9 @@ const DashboardPage = () => {
           <LastEvents title="Últimos eventos adicionados" />
         </Container>
         <Container className="calendar-section" />
-        <Container className="pets-section" />
+        <Container className="pets-section">
+          <MyPets />
+        </Container>
         <Container className="day-events-section" />
       </GridLayout>
     </MainContainer>

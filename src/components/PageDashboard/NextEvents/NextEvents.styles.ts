@@ -27,6 +27,7 @@ export const EventsList = styled.ul`
 export const Event = styled.li`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1rem;
   border: 1px solid ${({ theme }) => theme.colors.grayLight};

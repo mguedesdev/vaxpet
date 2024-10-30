@@ -14,7 +14,7 @@ export const MainContainer = styled.div`
 
 export const GridLayout = styled.div`
   display: grid;
-  grid-template-columns: repeat(10, 1fr); /* 10 colunas de tamanho igual */
+  grid-template-columns: repeat(18, 1fr); /* 10 colunas de tamanho igual */
   grid-template-rows: repeat(11, 1fr); /* 10 linhas de tamanho igual */
   width: 100%;
   height: 90%;
@@ -22,25 +22,25 @@ export const GridLayout = styled.div`
 
   /* Layout dos primeiros 2 quadros (Próximos eventos e Últimos eventos adicionados) */
   .events-section {
-    grid-column: span 4; /* Ocupar 4/10 das colunas */
+    grid-column: span 7; /* Ocupar 4/10 das colunas */
     grid-row: span 5; /* Ocupar 5/11 das linhas */
   }
 
   /* Calendário ocupa 2/10 das colunas */
   .calendar-section {
-    grid-column: span 2; /* Ocupar 2/10 das colunas */
+    grid-column: span 4; /* Ocupar 2/10 das colunas */
     grid-row: span 5; /* Ocupar 5/11 das linhas */
   }
 
   /* A lista de pets ocupa 8/10 das colunas */
   .pets-section {
-    grid-column: span 8; /* Ocupar 8/10 das colunas */
+    grid-column: span 14; /* Ocupar 8/10 das colunas */
     grid-row: span 6; /* Ocupar 6/11 das linhas */
   }
 
   /* Eventos do dia selecionado ocupam 2/10 das colunas */
   .day-events-section {
-    grid-column: span 2; /* Ocupar 2/10 das colunas */
+    grid-column: span 4; /* Ocupar 2/10 das colunas */
     grid-row: span 6; /* Ocupar 6/11 das linhas */
   }
 
@@ -82,6 +82,6 @@ export const Container = styled.div`
   height: 100%;
   padding: 1rem;
   background-color: ${({ theme }) => theme.colors.white};
-  border-radius: 0.8rem;
+  border-radius: 0.6rem;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
 `;
